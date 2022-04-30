@@ -1,0 +1,26 @@
+{
+  "name": "car-plate-app",
+  "version": "1.0.0",
+  "description": "Car Plate Program",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fisayoa/Car-Plate.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fisayoa/Car-Plate/issues"
+  },
+  "homepage": "https://github.com/fisayoa/Car-Plate#readme",
+  "dependencies": {
+    "ejs": "^3.1.7",
+    "express": "^4.18.1",
+    "morgan": "^1.10.0",
+    "mysql2": "^2.3.3"
+  }
+}
