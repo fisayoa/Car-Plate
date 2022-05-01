@@ -23,17 +23,7 @@
             <div class="card card-4">
                 <div class="card-body">
                     <h2 class="title">Car Registration Form</h2>
-                    <% if(error): %>
-                        <div class="alert alert-danger" role="alert">
-                            <%= error %>
-                        </div>
-                    <% endif %>
-                    <% if(success): %>
-                        <div class="alert alert-success" role="alert">
-                            <%= success %>
-                        </div>
-                    <% endif %>
-                    <form method="POST" action="/car">
+                    <form method="POST" action="/car" enctype="multipart/form-data">
                         <div class="row row-space">
                             <div class="col-2">
                                 <div class="input-group">
@@ -65,10 +55,10 @@
                                 </div>
                         </div>
                         <div class="row row-space">
-                            <div class="col-2">
+                            <div class="col-12">
                                 <div class="input-group">
                                     <label class="label">Picture</label>
-                                    <input class="input--style-4" type="file" name="picture">
+                                    <input class="input--style-4" type="file" name="image">
                                 </div>
                             </div>
                         </div>

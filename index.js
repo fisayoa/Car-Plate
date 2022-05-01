@@ -1,6 +1,7 @@
 require('dotenv').config();
 const express = require('express'),
-    logger = require('morgan');
+    logger = require('morgan'),
+    fileUpload = require('express-fileupload');
 
 const Car = require('./controller/Car');
 
@@ -8,6 +9,9 @@ const app = express();
 
 app.set('view engine', 'ejs');
 
+app.use(fileUpload({
+    limits: { fileSize: 50 * 1024 * 1024 },
+}));
 app.use(logger('dev'));
 app.use(express.static('public'));
 app.use(express.json());
