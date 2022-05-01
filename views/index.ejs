@@ -23,6 +23,11 @@
             <div class="card card-4">
                 <div class="card-body">
                     <h2 class="title">Car Registration Form</h2>
+                    <% if(error): %>
+                        <div class="alert alert-danger" role="alert">
+                            <%= error %>
+                        </div>
+                    <% endif %>
                     <form method="POST" action="/car">
                         <div class="row row-space">
                             <div class="col-2">
