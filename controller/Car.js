@@ -13,6 +13,7 @@ const Create = async (req, res) => {
     const [ result ] = await connection.execute(`INSERT INTO cars (car_model, plate_number, engine_number, year) VALUES (?, ?, ?, ?)`, [car_model, plate_number, engine_number, year]);
     if(result) {
         res.render('success');
+        res.render('index', { success: 'Car added successfully' });
     } else {
         res.render('index', { error: 'Something went wrong' });
     }
